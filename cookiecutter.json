@@ -1,0 +1,20 @@
+{
+	"full_name": "Roberto Mauro",
+	"email": "erremauro@icloud.com",
+	"github_username": "erremauro",
+	"project_name": "Django Almost Scratch Project",
+	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+	"project_short_description": "Django Almost Scratch Project template for minimal setup",
+	"release_date": "{% now 'local' %}",
+	"pgsql_local_database": "",
+	"pgsql_local_username": "",
+	"pgsql_local_password": "",
+	"pypi_username": "{{ cookiecutter.github_username }}",
+	"year": "{{ cookiecutter.release_date[:4] }}",
+	"version": "0.1.0",
+	"use_pytest": "n",
+	"use_pypi_deployment_with_travis": "y",
+	"_copy_without_render": [
+        "*.html"
+    ]
+}
