@@ -1,3 +1,5 @@
+from .common import *
+
 """
 Django local settings for errews project.
 

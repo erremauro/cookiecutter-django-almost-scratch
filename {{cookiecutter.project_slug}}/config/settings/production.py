@@ -1,3 +1,5 @@
+from .common import *
+
 """
 Django production settings for errews project.
 
