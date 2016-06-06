@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shorty',
+    '{{cookiecutter.project_slug}}',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -101,3 +101,19 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+SECRET_KEY = '{{cookiecutter.project_slug}}_secret_key'
+
+# Database
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ['{{cookiecutter.project_slug}}_dbname'],
+        'USER': os.environ['{{cookiecutter.project_slug}}_dbuser'],
+        'PASSWORD': os.environ['{{cookiecutter.project_slug}}_dbpasswd'],
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
+}
